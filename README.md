@@ -34,11 +34,11 @@ I build control systems and scientific software for synchrotron beamlines at the
 - Self-assembled nanoparticle micro-shells templated by liquid crystal sorting — *Soft Matter*, 2015 · cited 34×
 - Benchmarking topic models on scientific articles using BERTeley — *Natural Language Processing Journal*, 2024 · cited 25×
 
-<sub>[see all on Google Scholar](https://scholar.google.com/citations?user=SCHOLAR_ID_HERE)</sub>
+<sub>[see all on Google Scholar](https://scholar.google.com/citations?user=HilPbaoAAAAJ)</sub>
 
 ---
 
 <sub>
-[ORCID](https://orcid.org/0000-0003-0824-8548) · [Google Scholar](https://scholar.google.com/citations?user=SCHOLAR_ID_HERE) · [LinkedIn](https://www.linkedin.com/in/LINKEDIN_SLUG_HERE)
+[ORCID](https://orcid.org/0000-0003-0824-8548) · [Google Scholar](https://scholar.google.com/citations?user=HilPbaoAAAAJ) · [LinkedIn](https://www.linkedin.com/in/ronald-pandolfi-39216435)
  · this page regenerates itself weekly via [GitHub Actions](scripts/build.py)
 </sub>
