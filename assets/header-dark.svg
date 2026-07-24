@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 220">
+  <defs>
+    <linearGradient id="beamfade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#4dd0e1" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#4dd0e1" stop-opacity="0.15"/>
+    </linearGradient>
+  </defs>
+  <rect width="1000" height="220" fill="#0d1117"/>
+  <!-- storage ring: large circle cropped at left edge -->
+  <circle cx="-40" cy="110" r="190" fill="none" stroke="#30363d" stroke-width="1.5"/>
+  <circle cx="-40" cy="110" r="150" fill="none" stroke="#21262d" stroke-width="1"/>
+  <!-- tangent beam line extracting rightward -->
+  <line x1="148" y1="98" x2="640" y2="62" stroke="url(#beamfade)" stroke-width="1.5"/>
+  <!-- beamline optics tick marks along the beam -->
+  <g stroke="#4dd0e1" stroke-width="1.5">
+    <line x1="250" y1="84" x2="250" y2="98"/>
+    <line x1="330" y1="78" x2="330" y2="92"/>
+    <line x1="440" y1="70" x2="440" y2="84"/>
+  </g>
+  <circle cx="148" cy="98" r="3" fill="#4dd0e1"/>
+  <!-- name + role -->
+  <text x="640" y="112" font-family='"Segoe UI", "Helvetica Neue", sans-serif'
+        font-size="34" font-weight="600" fill="#e6edf3">Ronald Pandolfi</text>
+  <text x="640" y="140" font-family='"SF Mono", "Segoe UI Mono", "Cascadia Code", monospace'
+        font-size="13" fill="#8b949e">Scientific software · beamline controls</text>
+  <text x="640" y="160" font-family='"SF Mono", "Segoe UI Mono", "Cascadia Code", monospace'
+        font-size="13" fill="#8b949e">Advanced Light Source · Lawrence Berkeley National Lab</text>
+</svg>
