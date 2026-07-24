@@ -15,7 +15,7 @@ I build control systems and scientific software for synchrotron beamlines at the
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/activity-dark.svg">
-  <img alt="Past-year activity: 2228 commits, 66 pull requests, 23 repositories" src="assets/activity-light.svg" width="100%">
+  <img alt="Past-year activity: 2229 commits, 66 pull requests, 23 repositories" src="assets/activity-light.svg" width="100%">
 </picture>
 
 ## Selected projects
