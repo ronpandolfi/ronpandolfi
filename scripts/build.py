@@ -125,3 +125,63 @@ def fetch_publications(top_n: int = 5) -> list:
             pub["citations"] = _crossref_citations(pub["doi"])
     pubs.sort(key=lambda p: (p["citations"] or 0), reverse=True)
     return pubs[:top_n]
+
+
+PALETTES = {
+    "dark": {"bg": "#0d1117", "text": "#e6edf3", "accent": "#4dd0e1",
+             "border": "#30363d", "muted": "#8b949e"},
+    "light": {"bg": "#ffffff", "text": "#1f2328", "accent": "#0e7490",
+              "border": "#d0d7de", "muted": "#57606a"},
+}
+MONO = '"SF Mono", "Segoe UI Mono", "Cascadia Code", monospace'
+LANG_ALPHAS = ["ff", "b0", "78", "4c", "2e"]  # accent opacity steps for language bar
+
+
+def activity_svg(activity: dict, theme: str) -> str:
+    p = PALETTES[theme]
+    w, h = 1000, 170
+    parts = [
+        f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" '
+        f'font-family=\'{MONO}\'>',
+        f'<rect x="0.5" y="0.5" width="{w - 1}" height="{h - 1}" rx="8" '
+        f'fill="{p["bg"]}" stroke="{p["border"]}"/>',
+    ]
+    # --- sparkline (left third) ---
+    sx, sy, sw, sh = 40, 40, 260, 90
+    weeks = activity["weeks"]
+    peak = max(weeks) or 1
+    pts = [(sx + i * sw / (len(weeks) - 1), sy + sh - (v / peak) * sh)
+           for i, v in enumerate(weeks)]
+    line = " ".join(f"{x:.1f},{y:.1f}" for x, y in pts)
+    area = f"{sx},{sy + sh} {line} {sx + sw},{sy + sh}"
+    parts += [
+        f'<polygon points="{area}" fill="{p["accent"]}" opacity="0.12"/>',
+        f'<polyline points="{line}" fill="none" stroke="{p["accent"]}" stroke-width="1.5"/>',
+        f'<text x="{sx}" y="{sy + sh + 24}" font-size="11" fill="{p["muted"]}">'
+        f'CONTRIBUTIONS · PAST 12 MONTHS</text>',
+    ]
+    # --- counters (middle) ---
+    stats = [(activity["commits"], "COMMITS"), (activity["prs"], "PULL REQUESTS"),
+             (activity["repos_contributed"], "REPOSITORIES")]
+    for i, (val, label) in enumerate(stats):
+        cx = 390 + i * 130
+        parts += [
+            f'<text x="{cx}" y="82" font-size="30" fill="{p["text"]}">{val}</text>',
+            f'<text x="{cx}" y="104" font-size="10" fill="{p["muted"]}">{label}</text>',
+        ]
+    # --- language bar (right) ---
+    lx, ly, lw = 790, 62, 170
+    x = float(lx)
+    for i, lang in enumerate(activity["languages"]):
+        seg = lw * lang["pct"] / 100
+        alpha = LANG_ALPHAS[min(i, len(LANG_ALPHAS) - 1)]
+        parts.append(f'<rect x="{x:.1f}" y="{ly}" width="{max(seg - 2, 1):.1f}" '
+                     f'height="10" rx="2" fill="{p["accent"]}{alpha}"/>')
+        x += seg
+    legend = "  ".join(f'{l["name"]} {l["pct"]:.0f}%' for l in activity["languages"][:3])
+    parts += [
+        f'<text x="{lx}" y="96" font-size="10" fill="{p["muted"]}">{legend}</text>',
+        f'<text x="{lx}" y="40" font-size="11" fill="{p["muted"]}">LANGUAGES</text>',
+        "</svg>",
+    ]
+    return "".join(parts)
