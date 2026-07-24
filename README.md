@@ -1,0 +1,44 @@
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/header-dark.svg">
+  <img alt="Ronald Pandolfi — Scientific software · beamline controls — Advanced Light Source, LBNL" src="assets/header-light.svg" width="100%">
+</picture>
+
+I build control systems and scientific software for synchrotron beamlines at the Advanced Light Source. My work spans beamline control UIs, autonomous experiment orchestration, and the infrastructure that keeps instruments and their software reproducible.
+
+
+## Now
+
+- **Lightfall** — Unified beamline control dashboard for the ALS — plugin-based, built for operators and scientists alike. *(internal (ALS GitLab))*
+- **CSM** — Configuration management API for beamline control systems — declarative IOC provisioning across the facility. *(internal (ALS GitLab))*
+
+<sub>updated 2026-07-23</sub>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/activity-dark.svg">
+  <img alt="Past-year activity: 2214 commits, 66 pull requests, 22 repositories" src="assets/activity-light.svg" width="100%">
+</picture>
+
+## Selected projects
+
+- [**Xi-CAM**](https://github.com/Xi-CAM/Xi-cam) — Extensible platform for synchrotron data reduction, visualization, and management.
+- [**Tsuchinoko**](https://github.com/lbl-camera/tsuchinoko) — Adaptive-experiment Qt application driving gpCAM autonomous measurement.
+- [**bluesky ecosystem**](https://github.com/bluesky) — Contributions across the Bluesky experiment-orchestration ecosystem.
+- [**bcsophyd-zmq**](https://github.com/ronpandolfi/bcsophyd-zmq) — LabVIEW ↔ Bluesky bridge over ZMQ for legacy beamline control integration.
+
+
+## Selected publications
+
+- Xi-cam: a versatile interface for data visualization and analysis — *Journal of Synchrotron Radiation*, 2018 · cited 108×
+- Quantum dot/liquid crystal composite materials: self-assembly driven by liquid crystal phase transition templating — *Journal of Materials Chemistry C*, 2013 · cited 83×
+- Tuning Quantum-Dot Organization in Liquid Crystals for Robust Photonic Applications — *ChemPhysChem*, 2014 · cited 59×
+- Self-assembled nanoparticle micro-shells templated by liquid crystal sorting — *Soft Matter*, 2015 · cited 34×
+- Benchmarking topic models on scientific articles using BERTeley — *Natural Language Processing Journal*, 2024 · cited 25×
+
+<sub>[see all on Google Scholar](https://scholar.google.com/citations?user=SCHOLAR_ID_HERE)</sub>
+
+---
+
+<sub>
+[ORCID](https://orcid.org/0000-0003-0824-8548) · [Google Scholar](https://scholar.google.com/citations?user=SCHOLAR_ID_HERE) · [LinkedIn](https://www.linkedin.com/in/LINKEDIN_SLUG_HERE)
+ · this page regenerates itself weekly via [GitHub Actions](scripts/build.py)
+</sub>

@@ -1,0 +1,120 @@
+{
+  "activity": {
+    "commits": 2214,
+    "prs": 66,
+    "repos_contributed": 22,
+    "weeks": [
+      20,
+      4,
+      0,
+      20,
+      15,
+      4,
+      7,
+      39,
+      1,
+      0,
+      0,
+      2,
+      1,
+      7,
+      3,
+      28,
+      6,
+      0,
+      15,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      67,
+      169,
+      40,
+      44,
+      31,
+      17,
+      19,
+      9,
+      45,
+      63,
+      34,
+      240,
+      235,
+      69,
+      110,
+      45,
+      70,
+      187,
+      66,
+      184,
+      153,
+      188,
+      167,
+      62,
+      73,
+      49,
+      13
+    ],
+    "languages": [
+      {
+        "name": "Jupyter Notebook",
+        "pct": 65.7
+      },
+      {
+        "name": "Python",
+        "pct": 26.4
+      },
+      {
+        "name": "C++",
+        "pct": 5.6
+      },
+      {
+        "name": "Cuda",
+        "pct": 1.1
+      },
+      {
+        "name": "C",
+        "pct": 0.4
+      }
+    ]
+  },
+  "publications": [
+    {
+      "title": "Xi-cam: a versatile interface for data visualization and analysis",
+      "venue": "Journal of Synchrotron Radiation",
+      "year": 2018,
+      "citations": 108,
+      "doi": "10.1107/S1600577518005787"
+    },
+    {
+      "title": "Quantum dot/liquid crystal composite materials: self-assembly driven by liquid crystal phase transition templating",
+      "venue": "Journal of Materials Chemistry C",
+      "year": 2013,
+      "citations": 83,
+      "doi": "10.1039/c3tc31043d"
+    },
+    {
+      "title": "Tuning Quantum-Dot Organization in Liquid Crystals for Robust Photonic Applications",
+      "venue": "ChemPhysChem",
+      "year": 2014,
+      "citations": 59,
+      "doi": "10.1002/cphc.201301007"
+    },
+    {
+      "title": "Self-assembled nanoparticle micro-shells templated by liquid crystal sorting",
+      "venue": "Soft Matter",
+      "year": 2015,
+      "citations": 34,
+      "doi": "10.1039/c4sm02326a"
+    },
+    {
+      "title": "Benchmarking topic models on scientific articles using BERTeley",
+      "venue": "Natural Language Processing Journal",
+      "year": 2024,
+      "citations": 25,
+      "doi": "10.1016/j.nlp.2023.100044"
+    }
+  ]
+}
