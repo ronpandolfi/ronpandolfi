@@ -1,0 +1,29 @@
+name: build-profile
+on:
+  schedule:
+    - cron: "17 15 * * 1"   # Mondays 15:17 UTC ≈ 8:17 AM Pacific
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ["data/**", "templates/**", "scripts/**", "assets/header-*.svg"]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - name: Regenerate README
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: uv run scripts/build.py
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md assets/ data/cache.json
+          git diff --cached --quiet || git commit -m "chore: regenerate profile"
+          git push
