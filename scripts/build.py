@@ -185,3 +185,39 @@ def activity_svg(activity: dict, theme: str) -> str:
         "</svg>",
     ]
     return "".join(parts)
+
+
+def load_with_fallback(name: str, fetcher, cache: dict):
+    try:
+        value = fetcher()
+        cache = {**cache, name: value}
+        return value, cache
+    except Exception as exc:
+        if name in cache:
+            print(f"[warn] {name} fetch failed ({exc}); using cached values")
+            return cache[name], cache
+        raise RuntimeError(f"{name} fetch failed and no cache available") from exc
+
+
+def main() -> None:
+    token = os.environ["GITHUB_TOKEN"]
+    profile = yaml.safe_load((ROOT / "data" / "profile.yaml").read_text(encoding="utf-8"))
+    cache_path = ROOT / "data" / "cache.json"
+    cache = json.loads(cache_path.read_text(encoding="utf-8")) if cache_path.exists() else {}
+
+    activity, cache = load_with_fallback("activity", lambda: fetch_github(token), cache)
+    publications, cache = load_with_fallback("publications", fetch_publications, cache)
+
+    for theme in ("dark", "light"):
+        (ROOT / "assets" / f"activity-{theme}.svg").write_text(
+            activity_svg(activity, theme), encoding="utf-8")
+
+    updated = dt.date.today().isoformat()
+    (ROOT / "README.md").write_text(
+        render_readme(profile, activity, publications, updated), encoding="utf-8")
+    cache_path.write_text(json.dumps(cache, indent=2), encoding="utf-8")
+    print("README.md and activity SVGs regenerated.")
+
+
+if __name__ == "__main__":
+    main()
