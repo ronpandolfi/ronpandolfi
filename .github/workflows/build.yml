@@ -8,6 +8,10 @@ on:
     # bot commits (cache.json, README, SVGs) use GITHUB_TOKEN and cannot retrigger; keep paths narrow anyway
     paths: ["data/profile.yaml", "templates/**", "scripts/**", "assets/header-*.svg"]
 
+concurrency:
+  group: build-profile
+  cancel-in-progress: false
+
 permissions:
   contents: write
 
