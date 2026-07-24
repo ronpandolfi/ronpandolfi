@@ -32,3 +32,12 @@ def test_summarize_contributions():
     assert act["repos_contributed"] == 12
     assert len(act["weeks"]) == 52 and act["weeks"][0] == 14
     assert act["languages"][0] == {"name": "Python", "pct": 70.0}
+
+
+def test_summarize_contributions_excludes_languages():
+    fixture = _gql_fixture()
+    fixture["data"]["user"]["repositories"]["nodes"][0]["languages"]["edges"].append(
+        {"size": 90000, "node": {"name": "Jupyter Notebook"}})
+    act = build.summarize_contributions(fixture, exclude_languages={"Jupyter Notebook"})
+    assert [l["name"] for l in act["languages"]] == ["Python", "C++"]
+    assert act["languages"][0]["pct"] == 70.0

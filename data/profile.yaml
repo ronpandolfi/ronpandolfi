@@ -5,6 +5,10 @@ intro: >
   at the Advanced Light Source. My work spans beamline control UIs, autonomous
   experiment orchestration, and the infrastructure that keeps instruments and
   their software reproducible.
+# byte counts in notebooks/web assets swamp real source; keep the bar honest
+language_excludes:
+  - Jupyter Notebook
+  - HTML
 now:
   - name: Lightfall
     desc: Unified beamline control dashboard for the ALS — plugin-based, built for operators and scientists alike.

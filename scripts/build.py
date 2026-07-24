@@ -46,7 +46,7 @@ query($login: String!, $from: DateTime!, $to: DateTime!) {
 MAX_LANGUAGES = 5
 
 
-def summarize_contributions(gql: dict) -> dict:
+def summarize_contributions(gql: dict, exclude_languages: set[str] = frozenset()) -> dict:
     user = gql["data"]["user"]
     coll = user["contributionsCollection"]
     weeks = [sum(d["contributionCount"] for d in w["contributionDays"])
@@ -54,7 +54,10 @@ def summarize_contributions(gql: dict) -> dict:
     sizes: dict[str, int] = {}
     for repo in user["repositories"]["nodes"]:
         for edge in repo["languages"]["edges"]:
-            sizes[edge["node"]["name"]] = sizes.get(edge["node"]["name"], 0) + edge["size"]
+            name = edge["node"]["name"]
+            if name in exclude_languages:
+                continue
+            sizes[name] = sizes.get(name, 0) + edge["size"]
     total = sum(sizes.values()) or 1
     languages = [{"name": n, "pct": round(100 * s / total, 1)}
                  for n, s in sorted(sizes.items(), key=lambda kv: -kv[1])[:MAX_LANGUAGES]]
@@ -67,7 +70,7 @@ def summarize_contributions(gql: dict) -> dict:
     }
 
 
-def fetch_github(token: str) -> dict:
+def fetch_github(token: str, exclude_languages: set[str] = frozenset()) -> dict:
     now = dt.datetime.now(dt.UTC)
     variables = {"login": LOGIN,
                  "from": (now - dt.timedelta(days=365)).isoformat(),
@@ -79,7 +82,7 @@ def fetch_github(token: str) -> dict:
     payload = resp.json()
     if "errors" in payload:
         raise RuntimeError(f"GraphQL errors: {payload['errors']}")
-    return summarize_contributions(payload)
+    return summarize_contributions(payload, exclude_languages)
 
 
 def parse_orcid_works(works: dict) -> list:
@@ -207,7 +210,9 @@ def main() -> None:
     cache_path = ROOT / "data" / "cache.json"
     cache = json.loads(cache_path.read_text(encoding="utf-8")) if cache_path.exists() else {}
 
-    activity, cache = load_with_fallback("activity", lambda: fetch_github(token), cache)
+    exclude = set(profile.get("language_excludes", []))
+    activity, cache = load_with_fallback(
+        "activity", lambda: fetch_github(token, exclude), cache)
     publications, cache = load_with_fallback("publications", fetch_publications, cache)
 
     for theme in ("dark", "light"):

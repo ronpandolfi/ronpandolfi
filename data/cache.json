@@ -59,24 +59,24 @@
     ],
     "languages": [
       {
-        "name": "Jupyter Notebook",
-        "pct": 65.7
-      },
-      {
         "name": "Python",
-        "pct": 26.4
+        "pct": 77.6
       },
       {
         "name": "C++",
-        "pct": 5.6
+        "pct": 16.6
       },
       {
         "name": "Cuda",
-        "pct": 1.1
+        "pct": 3.4
       },
       {
         "name": "C",
-        "pct": 0.4
+        "pct": 1.1
+      },
+      {
+        "name": "TeX",
+        "pct": 0.6
       }
     ]
   },
