@@ -1,6 +1,6 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/header-dark.svg">
-  <img alt="Ronald Pandolfi — Scientific software · beamline controls — Advanced Light Source, LBNL" src="assets/header-light.svg" width="100%">
+  <img alt="Ronald Pandolfi — Scientific software · Beamline Controls — AMCR · CAMERA · LBNL" src="assets/header-light.svg" width="100%">
 </picture>
 
 I build control systems and scientific software for synchrotron beamlines at the Advanced Light Source. My work spans beamline control UIs, autonomous experiment orchestration, and the infrastructure that keeps instruments and their software reproducible.
@@ -8,21 +8,26 @@ I build control systems and scientific software for synchrotron beamlines at the
 
 ## Now
 
-- **Lightfall** — Unified beamline control dashboard for the ALS — plugin-based, built for operators and scientists alike. *(internal (ALS GitLab))*
-- **CSM** — Configuration management API for beamline control systems — declarative IOC provisioning across the facility. *(internal (ALS GitLab))*
+- [**Lightfall**](https://github.com/als-controls/lightfall) — A modern, unified control system for synchrotron lightsource facilities — plugin-based, built for operators and scientists alike.
+- **CSM** — Configuration management API for beamline control systems — declarative IOC provisioning across the facility. *(internal)*
 
-<sub>updated 2026-07-24</sub>
+<sub>updated 2026-07-23</sub>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/activity-dark.svg">
-  <img alt="Past-year activity: 2229 commits, 66 pull requests, 23 repositories" src="assets/activity-light.svg" width="100%">
+  <img alt="Past-year activity: 2230 commits, 66 pull requests, 23 repositories" src="assets/activity-light.svg" width="100%">
 </picture>
 
 ## Selected projects
 
 - [**Xi-CAM**](https://github.com/Xi-CAM/Xi-cam) — Extensible platform for synchrotron data reduction, visualization, and management.
 - [**Tsuchinoko**](https://github.com/lbl-camera/tsuchinoko) — Adaptive-experiment Qt application driving gpCAM autonomous measurement.
-- [**bluesky ecosystem**](https://github.com/bluesky) — Contributions across the Bluesky experiment-orchestration ecosystem.
+- [**gpCAM**](https://github.com/lbl-camera/gpCAM) — Autonomous experimentation and uncertainty quantification engine (CAMERA).
+- [**fvGP**](https://github.com/lbl-camera/fvGP) — Flexible HPC Gaussian processes — the GP engine under gpCAM.
+- [**HGDL**](https://github.com/lbl-camera/HGDL) — Distributed HPC function optimization.
+- [**Ascribe-XR / Ascribe-Link**](https://github.com/lbl-camera/Ascribe-XR) — Scientific data visualization in VR (Godot 4 + OpenXR), with an HTTP specimen server for meshes, volumes, and point clouds.
+- **Catalux** — Beamline Controls Group hardware-inventory webapp — searchable catalog of equipment models, units, and specs. *(internal)*
+- **IOCular** — IOC management agent for EPICS control systems — remote monitoring, control, log streaming, and deployment. *(internal)*
 - [**bcsophyd-zmq**](https://github.com/ronpandolfi/bcsophyd-zmq) — LabVIEW ↔ Bluesky bridge over ZMQ for legacy beamline control integration.
 
 
@@ -38,8 +43,4 @@ I build control systems and scientific software for synchrotron beamlines at the
 
 ---
 
-<sub>
-[ORCID](https://orcid.org/0000-0003-0824-8548) · [Google Scholar](https://scholar.google.com/citations?user=HilPbaoAAAAJ) · [LinkedIn](https://www.linkedin.com/in/ronald-pandolfi-39216435)
- · this page regenerates itself weekly via [GitHub Actions](scripts/build.py)
-</sub>
-
+<sub>[ORCID](https://orcid.org/0000-0003-0824-8548) · [Google Scholar](https://scholar.google.com/citations?user=HilPbaoAAAAJ) · [LinkedIn](https://www.linkedin.com/in/ronald-pandolfi-39216435) · this page regenerates itself weekly via [GitHub Actions](scripts/build.py)</sub>

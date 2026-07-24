@@ -8,7 +8,7 @@
 ## Now
 
 {% for item in profile.now -%}
-- **{{ item.name }}** — {{ item.desc }}{% if item.note %} *({{ item.note }})*{% endif %}
+- {% if item.url %}[**{{ item.name }}**]({{ item.url }}){% else %}**{{ item.name }}**{% endif %} — {{ item.desc }}{% if item.note %} *({{ item.note }})*{% endif %}
 {% endfor %}
 <sub>updated {{ updated }}</sub>
 
@@ -20,7 +20,7 @@
 ## Selected projects
 
 {% for p in profile.projects -%}
-- [**{{ p.name }}**]({{ p.url }}) — {{ p.desc }}
+- {% if p.url %}[**{{ p.name }}**]({{ p.url }}){% else %}**{{ p.name }}**{% endif %} — {{ p.desc }}{% if p.note %} *({{ p.note }})*{% endif %}
 {% endfor %}
 
 ## Selected publications
@@ -32,7 +32,4 @@
 
 ---
 
-<sub>
-{% for l in profile.links %}[{{ l.name }}]({{ l.url }}){% if not loop.last %} · {% endif %}{% endfor %}
- · this page regenerates itself weekly via [GitHub Actions](scripts/build.py)
-</sub>
+<sub>{% for l in profile.links %}[{{ l.name }}]({{ l.url }}) · {% endfor %}this page regenerates itself weekly via [GitHub Actions](scripts/build.py)</sub>

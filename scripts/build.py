@@ -137,7 +137,6 @@ PALETTES = {
               "border": "#d0d7de", "muted": "#57606a"},
 }
 MONO = '"SF Mono", "Segoe UI Mono", "Cascadia Code", monospace'
-LANG_ALPHAS = ["ff", "b0", "78", "4c", "2e"]  # accent opacity steps for language bar
 
 
 def activity_svg(activity: dict, theme: str) -> str:
@@ -163,30 +162,16 @@ def activity_svg(activity: dict, theme: str) -> str:
         f'<text x="{sx}" y="{sy + sh + 24}" font-size="11" fill="{p["muted"]}">'
         f'CONTRIBUTIONS · PAST 12 MONTHS</text>',
     ]
-    # --- counters (middle) ---
+    # --- counters (right) ---
     stats = [(activity["commits"], "COMMITS"), (activity["prs"], "PULL REQUESTS"),
              (activity["repos_contributed"], "REPOSITORIES")]
     for i, (val, label) in enumerate(stats):
-        cx = 390 + i * 130
+        cx = 440 + i * 190
         parts += [
-            f'<text x="{cx}" y="82" font-size="30" fill="{p["text"]}">{val}</text>',
-            f'<text x="{cx}" y="104" font-size="10" fill="{p["muted"]}">{label}</text>',
+            f'<text x="{cx}" y="88" font-size="30" fill="{p["text"]}">{val}</text>',
+            f'<text x="{cx}" y="110" font-size="10" fill="{p["muted"]}">{label}</text>',
         ]
-    # --- language bar (right) ---
-    lx, ly, lw = 790, 62, 170
-    x = float(lx)
-    for i, lang in enumerate(activity["languages"]):
-        seg = lw * lang["pct"] / 100
-        alpha = LANG_ALPHAS[min(i, len(LANG_ALPHAS) - 1)]
-        parts.append(f'<rect x="{x:.1f}" y="{ly}" width="{max(seg - 2, 1):.1f}" '
-                     f'height="10" rx="2" fill="{p["accent"]}{alpha}"/>')
-        x += seg
-    legend = "  ".join(f'{l["name"]} {l["pct"]:.0f}%' for l in activity["languages"][:3])
-    parts += [
-        f'<text x="{lx}" y="96" font-size="10" fill="{p["muted"]}">{legend}</text>',
-        f'<text x="{lx}" y="40" font-size="11" fill="{p["muted"]}">LANGUAGES</text>',
-        "</svg>",
-    ]
+    parts.append("</svg>")
     return "".join(parts)
 
 

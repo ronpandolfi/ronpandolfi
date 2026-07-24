@@ -1,21 +1,21 @@
 name: Ronald Pandolfi
-role: "Scientific software · beamline controls — Advanced Light Source, LBNL"
+role: "Scientific software · Beamline Controls — AMCR · CAMERA · LBNL"
 intro: >
   I build control systems and scientific software for synchrotron beamlines
   at the Advanced Light Source. My work spans beamline control UIs, autonomous
   experiment orchestration, and the infrastructure that keeps instruments and
   their software reproducible.
-# byte counts in notebooks/web assets swamp real source; keep the bar honest
+# byte counts in notebooks/web assets swamp real source; keep the stats honest
 language_excludes:
   - Jupyter Notebook
   - HTML
 now:
   - name: Lightfall
-    desc: Unified beamline control dashboard for the ALS — plugin-based, built for operators and scientists alike.
-    note: internal (ALS GitLab)
+    url: https://github.com/als-controls/lightfall
+    desc: A modern, unified control system for synchrotron lightsource facilities — plugin-based, built for operators and scientists alike.
   - name: CSM
     desc: Configuration management API for beamline control systems — declarative IOC provisioning across the facility.
-    note: internal (ALS GitLab)
+    note: internal
 projects:
   - name: Xi-CAM
     url: https://github.com/Xi-CAM/Xi-cam
@@ -23,9 +23,24 @@ projects:
   - name: Tsuchinoko
     url: https://github.com/lbl-camera/tsuchinoko
     desc: Adaptive-experiment Qt application driving gpCAM autonomous measurement.
-  - name: bluesky ecosystem
-    url: https://github.com/bluesky
-    desc: Contributions across the Bluesky experiment-orchestration ecosystem.
+  - name: gpCAM
+    url: https://github.com/lbl-camera/gpCAM
+    desc: Autonomous experimentation and uncertainty quantification engine (CAMERA).
+  - name: fvGP
+    url: https://github.com/lbl-camera/fvGP
+    desc: Flexible HPC Gaussian processes — the GP engine under gpCAM.
+  - name: HGDL
+    url: https://github.com/lbl-camera/HGDL
+    desc: Distributed HPC function optimization.
+  - name: Ascribe-XR / Ascribe-Link
+    url: https://github.com/lbl-camera/Ascribe-XR
+    desc: Scientific data visualization in VR (Godot 4 + OpenXR), with an HTTP specimen server for meshes, volumes, and point clouds.
+  - name: Catalux
+    desc: Beamline Controls Group hardware-inventory webapp — searchable catalog of equipment models, units, and specs.
+    note: internal
+  - name: IOCular
+    desc: IOC management agent for EPICS control systems — remote monitoring, control, log streaming, and deployment.
+    note: internal
   - name: bcsophyd-zmq
     url: https://github.com/ronpandolfi/bcsophyd-zmq
     desc: LabVIEW ↔ Bluesky bridge over ZMQ for legacy beamline control integration.

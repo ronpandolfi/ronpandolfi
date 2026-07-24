@@ -15,7 +15,9 @@ def test_activity_svg_dark_and_light():
     assert dark.startswith("<svg") and dark.endswith("</svg>")
     assert "#0d1117" in dark and "#4dd0e1" in dark
     assert "#ffffff" in light and "#0e7490" in light
-    assert "412" in dark and "Python" in dark
+    assert "412" in dark and "COMMITS" in dark
+    # language bar dropped by design — panel is sparkline + counters only
+    assert "LANGUAGES" not in dark
     # sparkline polyline exists with 52 points
     assert dark.count(",") >= 52
 
