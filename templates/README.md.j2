@@ -5,23 +5,16 @@
 
 {{ profile.intro }}
 
-## Now
+## Projects
 
-{% for item in profile.now -%}
-- {% if item.url %}[**{{ item.name }}**]({{ item.url }}){% else %}**{{ item.name }}**{% endif %} — {{ item.desc }}{% if item.note %} *({{ item.note }})*{% endif %}
+{% for p in profile.projects -%}
+- {% if p.url %}[**{{ p.name }}**]({{ p.url }}){% else %}**{{ p.name }}**{% endif %} — {{ p.desc }}{% if p.note %} *({{ p.note }})*{% endif %}
 {% endfor %}
-<sub>updated {{ updated }}</sub>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/activity-dark.svg">
   <img alt="Past-year activity: {{ activity.commits }} commits, {{ activity.prs }} pull requests, {{ activity.repos_contributed }} repositories" src="assets/activity-light.svg" width="100%">
 </picture>
-
-## Selected projects
-
-{% for p in profile.projects -%}
-- {% if p.url %}[**{{ p.name }}**]({{ p.url }}){% else %}**{{ p.name }}**{% endif %} — {{ p.desc }}{% if p.note %} *({{ p.note }})*{% endif %}
-{% endfor %}
 
 ## Selected publications
 
@@ -32,4 +25,4 @@
 
 ---
 
-<sub>{% for l in profile.links %}[{{ l.name }}]({{ l.url }}) · {% endfor %}this page regenerates itself weekly via [GitHub Actions](scripts/build.py)</sub>
+<sub>{% for l in profile.links %}[{{ l.name }}]({{ l.url }}) · {% endfor %}this page regenerated itself on {{ updated }} via [GitHub Actions](scripts/build.py)</sub>

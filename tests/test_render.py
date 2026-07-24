@@ -15,8 +15,8 @@ FIXTURE_PUBS = [
 ]
 FIXTURE_PROFILE = {
     "name": "Ronald Pandolfi", "role": "role", "intro": "Intro text.",
-    "now": [{"name": "Lightfall", "desc": "dashboard", "note": "internal"}],
-    "projects": [{"name": "Xi-CAM", "url": "https://x", "desc": "platform"}],
+    "projects": [{"name": "Xi-CAM", "url": "https://x", "desc": "platform"},
+                 {"name": "CSM", "desc": "config mgmt", "note": "internal"}],
     "links": [{"name": "ORCID", "url": "https://orcid.org/0000-0003-0824-8548"}],
     "scholar_url": "https://scholar.example",
 }
@@ -25,8 +25,8 @@ FIXTURE_PROFILE = {
 def test_render_readme_contains_all_sections():
     out = build.render_readme(FIXTURE_PROFILE, FIXTURE_ACTIVITY, FIXTURE_PUBS, "2026-07-23")
     assert "Ronald Pandolfi" in out
-    assert "## Now" in out and "Lightfall" in out
-    assert "## Selected projects" in out and "Xi-CAM" in out
+    assert "## Projects" in out and "Xi-CAM" in out
+    assert "**CSM** — config mgmt *(internal)*" in out
     assert "cited 42×" in out
-    assert "updated 2026-07-23" in out
+    assert "2026-07-23" in out
     assert "activity-dark.svg" in out and "header-dark.svg" in out

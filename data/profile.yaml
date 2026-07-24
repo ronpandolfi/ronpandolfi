@@ -1,5 +1,5 @@
-name: Ronald Pandolfi
-role: "Scientific software · Beamline Controls — AMCR · CAMERA · LBNL"
+name: Ronald J. Pandolfi
+role: "Scientific software · Beamline Controls — CAMERA · AMCR · LBNL"
 intro: >
   I build control systems and scientific software for synchrotron beamlines
   at the Advanced Light Source. My work spans beamline control UIs, autonomous
@@ -9,14 +9,13 @@ intro: >
 language_excludes:
   - Jupyter Notebook
   - HTML
-now:
+projects:
   - name: Lightfall
     url: https://github.com/als-controls/lightfall
     desc: A modern, unified control system for synchrotron lightsource facilities — plugin-based, built for operators and scientists alike.
   - name: CSM
     desc: Configuration management API for beamline control systems — declarative IOC provisioning across the facility.
     note: internal
-projects:
   - name: Xi-CAM
     url: https://github.com/Xi-CAM/Xi-cam
     desc: Extensible platform for synchrotron data reduction, visualization, and management.
