@@ -107,7 +107,7 @@ def parse_orcid_works(works: dict) -> list:
 def _crossref_citations(doi: str) -> int | None:
     try:
         r = requests.get(f"https://api.crossref.org/works/{doi}",
-                         headers={"User-Agent": f"profile-readme (mailto:ronpandolfi@lbl.gov)"},
+                         headers={"User-Agent": "profile-readme (mailto:ronpandolfi@lbl.gov)"},
                          timeout=15)
         r.raise_for_status()
         return r.json()["message"].get("is-referenced-by-count")
@@ -200,7 +200,9 @@ def load_with_fallback(name: str, fetcher, cache: dict):
 
 
 def main() -> None:
-    token = os.environ["GITHUB_TOKEN"]
+    token = os.environ.get("GITHUB_TOKEN")
+    if not token:
+        raise SystemExit("GITHUB_TOKEN not set — export a PAT for local runs")
     profile = yaml.safe_load((ROOT / "data" / "profile.yaml").read_text(encoding="utf-8"))
     cache_path = ROOT / "data" / "cache.json"
     cache = json.loads(cache_path.read_text(encoding="utf-8")) if cache_path.exists() else {}
