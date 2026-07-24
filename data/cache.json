@@ -1,8 +1,8 @@
 {
   "activity": {
-    "commits": 2214,
+    "commits": 2228,
     "prs": 66,
-    "repos_contributed": 22,
+    "repos_contributed": 23,
     "weeks": [
       20,
       4,
@@ -55,28 +55,28 @@
       62,
       73,
       49,
-      13
+      28
     ],
     "languages": [
       {
         "name": "Python",
-        "pct": 77.6
+        "pct": 98.0
       },
       {
         "name": "C++",
-        "pct": 16.6
+        "pct": 1.7
       },
       {
-        "name": "Cuda",
-        "pct": 3.4
+        "name": "JavaScript",
+        "pct": 0.2
       },
       {
-        "name": "C",
-        "pct": 1.1
+        "name": "Makefile",
+        "pct": 0.1
       },
       {
-        "name": "TeX",
-        "pct": 0.6
+        "name": "CSS",
+        "pct": 0.1
       }
     ]
   },
