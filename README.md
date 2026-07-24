@@ -11,11 +11,11 @@ I build control systems and scientific software for synchrotron beamlines at the
 - [**Lightfall**](https://github.com/als-controls/lightfall) — A modern, unified control system for synchrotron lightsource facilities — plugin-based, built for operators and scientists alike.
 - **CSM** — Configuration management API for beamline control systems — declarative IOC provisioning across the facility. *(internal)*
 
-<sub>updated 2026-07-23</sub>
+<sub>updated 2026-07-24</sub>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/activity-dark.svg">
-  <img alt="Past-year activity: 2230 commits, 66 pull requests, 23 repositories" src="assets/activity-light.svg" width="100%">
+  <img alt="Past-year activity: 2231 commits, 66 pull requests, 23 repositories" src="assets/activity-light.svg" width="100%">
 </picture>
 
 ## Selected projects
