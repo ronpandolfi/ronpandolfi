@@ -80,3 +80,48 @@ def fetch_github(token: str) -> dict:
     if "errors" in payload:
         raise RuntimeError(f"GraphQL errors: {payload['errors']}")
     return summarize_contributions(payload)
+
+
+def parse_orcid_works(works: dict) -> list:
+    pubs = []
+    for group in works.get("group", []):
+        s = group["work-summary"][0]
+        doi = None
+        for eid in (s.get("external-ids") or {}).get("external-id", []):
+            if eid["external-id-type"] == "doi":
+                doi = eid["external-id-value"]
+        year = None
+        if s.get("publication-date") and s["publication-date"].get("year"):
+            year = int(s["publication-date"]["year"]["value"])
+        journal = s.get("journal-title")
+        pubs.append({
+            "title": s["title"]["title"]["value"],
+            "venue": journal["value"] if journal else "",
+            "year": year,
+            "citations": None,
+            "doi": doi,
+        })
+    return pubs
+
+
+def _crossref_citations(doi: str) -> int | None:
+    try:
+        r = requests.get(f"https://api.crossref.org/works/{doi}",
+                         headers={"User-Agent": f"profile-readme (mailto:ronpandolfi@lbl.gov)"},
+                         timeout=15)
+        r.raise_for_status()
+        return r.json()["message"].get("is-referenced-by-count")
+    except Exception:
+        return None
+
+
+def fetch_publications(top_n: int = 5) -> list:
+    r = requests.get(f"https://pub.orcid.org/v3.0/{ORCID}/works",
+                     headers={"Accept": "application/json"}, timeout=30)
+    r.raise_for_status()
+    pubs = parse_orcid_works(r.json())
+    for pub in pubs:
+        if pub["doi"]:
+            pub["citations"] = _crossref_citations(pub["doi"])
+    pubs.sort(key=lambda p: (p["citations"] or 0), reverse=True)
+    return pubs[:top_n]
