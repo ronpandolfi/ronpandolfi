@@ -1,10 +1,9 @@
 {
   "activity": {
-    "commits": 2231,
+    "commits": 2237,
     "prs": 66,
-    "repos_contributed": 23,
+    "repos_contributed": 24,
     "weeks": [
-      20,
       4,
       0,
       20,
@@ -55,27 +54,28 @@
       62,
       73,
       49,
-      31
+      56,
+      0
     ],
     "languages": [
       {
         "name": "Python",
-        "pct": 98.0
+        "pct": 95.9
       },
       {
         "name": "C++",
-        "pct": 1.7
+        "pct": 1.6
       },
       {
-        "name": "JavaScript",
-        "pct": 0.2
-      },
-      {
-        "name": "Makefile",
-        "pct": 0.1
+        "name": "TypeScript",
+        "pct": 1.4
       },
       {
         "name": "CSS",
+        "pct": 0.7
+      },
+      {
+        "name": "JavaScript",
         "pct": 0.1
       }
     ]
