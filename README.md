@@ -23,7 +23,7 @@ I build control systems and scientific software for synchrotron beamlines at the
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/activity-dark.svg">
-  <img alt="Past-year activity: 2237 commits, 66 pull requests, 24 repositories" src="assets/activity-light.svg" width="100%">
+  <img alt="Past-year activity: 2272 commits, 67 pull requests, 24 repositories" src="assets/activity-light.svg" width="100%">
 </picture>
 
 ## Selected publications
@@ -38,4 +38,4 @@ I build control systems and scientific software for synchrotron beamlines at the
 
 ---
 
-<sub>[ORCID](https://orcid.org/0000-0003-0824-8548) · [Google Scholar](https://scholar.google.com/citations?user=HilPbaoAAAAJ) · [LinkedIn](https://www.linkedin.com/in/ronald-pandolfi-39216435) · this page regenerated itself on 2026-07-27 via [GitHub Actions](scripts/build.py)</sub>
+<sub>[ORCID](https://orcid.org/0000-0003-0824-8548) · [Google Scholar](https://scholar.google.com/citations?user=HilPbaoAAAAJ) · [LinkedIn](https://www.linkedin.com/in/ronald-pandolfi-39216435) · this page regenerated itself on 2026-08-03 via [GitHub Actions](scripts/build.py)</sub>
