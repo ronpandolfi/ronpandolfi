@@ -23,7 +23,7 @@ I build control systems and scientific software for synchrotron beamlines at the
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/activity-dark.svg">
-  <img alt="Past-year activity: 2272 commits, 67 pull requests, 24 repositories" src="assets/activity-light.svg" width="100%">
+  <img alt="Past-year activity: 2290 commits, 66 pull requests, 24 repositories" src="assets/activity-light.svg" width="100%">
 </picture>
 
 ## Selected publications
@@ -32,10 +32,10 @@ I build control systems and scientific software for synchrotron beamlines at the
 - Quantum dot/liquid crystal composite materials: self-assembly driven by liquid crystal phase transition templating — *Journal of Materials Chemistry C*, 2013 · cited 83×
 - Tuning Quantum-Dot Organization in Liquid Crystals for Robust Photonic Applications — *ChemPhysChem*, 2014 · cited 59×
 - Self-assembled nanoparticle micro-shells templated by liquid crystal sorting — *Soft Matter*, 2015 · cited 34×
-- Benchmarking topic models on scientific articles using BERTeley — *Natural Language Processing Journal*, 2024 · cited 25×
+- Benchmarking topic models on scientific articles using BERTeley — *Natural Language Processing Journal*, 2024 · cited 26×
 
 <sub>[see all on Google Scholar](https://scholar.google.com/citations?user=HilPbaoAAAAJ)</sub>
 
 ---
 
-<sub>[ORCID](https://orcid.org/0000-0003-0824-8548) · [Google Scholar](https://scholar.google.com/citations?user=HilPbaoAAAAJ) · [LinkedIn](https://www.linkedin.com/in/ronald-pandolfi-39216435) · this page regenerated itself on 2026-08-03 via [GitHub Actions](scripts/build.py)</sub>
+<sub>[ORCID](https://orcid.org/0000-0003-0824-8548) · [Google Scholar](https://scholar.google.com/citations?user=HilPbaoAAAAJ) · [LinkedIn](https://www.linkedin.com/in/ronald-pandolfi-39216435) · this page regenerated itself on 2026-08-10 via [GitHub Actions](scripts/build.py)</sub>
