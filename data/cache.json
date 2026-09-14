@@ -1,10 +1,9 @@
 {
   "activity": {
-    "commits": 2469,
+    "commits": 2508,
     "prs": 62,
-    "repos_contributed": 25,
+    "repos_contributed": 26,
     "weeks": [
-      39,
       1,
       0,
       0,
@@ -53,30 +52,31 @@
       73,
       48,
       37,
-      28,
+      48,
       4,
+      27,
       0
     ],
     "languages": [
       {
+        "name": "GDScript",
+        "pct": 50.2
+      },
+      {
         "name": "Python",
-        "pct": 95.9
+        "pct": 46.9
       },
       {
         "name": "C++",
-        "pct": 1.6
-      },
-      {
-        "name": "TypeScript",
-        "pct": 1.4
+        "pct": 0.8
       },
       {
         "name": "CSS",
         "pct": 0.7
       },
       {
-        "name": "JavaScript",
-        "pct": 0.1
+        "name": "TypeScript",
+        "pct": 0.7
       }
     ]
   },
