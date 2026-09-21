@@ -1,10 +1,9 @@
 {
   "activity": {
-    "commits": 2508,
+    "commits": 2470,
     "prs": 62,
     "repos_contributed": 26,
     "weeks": [
-      1,
       0,
       0,
       2,
@@ -55,6 +54,7 @@
       48,
       4,
       27,
+      0,
       0
     ],
     "languages": [
