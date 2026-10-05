@@ -1,10 +1,9 @@
 {
   "activity": {
-    "commits": 2481,
+    "commits": 2505,
     "prs": 62,
     "repos_contributed": 26,
     "weeks": [
-      0,
       2,
       1,
       7,
@@ -55,16 +54,17 @@
       37,
       0,
       2,
+      24,
       0
     ],
     "languages": [
       {
         "name": "GDScript",
-        "pct": 50.2
+        "pct": 51.3
       },
       {
         "name": "Python",
-        "pct": 46.9
+        "pct": 45.8
       },
       {
         "name": "C++",
@@ -76,7 +76,7 @@
       },
       {
         "name": "TypeScript",
-        "pct": 0.7
+        "pct": 0.6
       }
     ]
   },
@@ -92,7 +92,7 @@
       "title": "Quantum dot/liquid crystal composite materials: self-assembly driven by liquid crystal phase transition templating",
       "venue": "Journal of Materials Chemistry C",
       "year": 2013,
-      "citations": 84,
+      "citations": 85,
       "doi": "10.1039/c3tc31043d"
     },
     {
@@ -113,7 +113,7 @@
       "title": "Benchmarking topic models on scientific articles using BERTeley",
       "venue": "Natural Language Processing Journal",
       "year": 2024,
-      "citations": 28,
+      "citations": 30,
       "doi": "10.1016/j.nlp.2023.100044"
     }
   ]
