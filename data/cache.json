@@ -1,17 +1,16 @@
 {
   "activity": {
-    "commits": 2505,
+    "commits": 2579,
     "prs": 62,
     "repos_contributed": 26,
     "weeks": [
-      2,
       1,
       7,
       3,
       28,
       7,
       0,
-      15,
+      16,
       1,
       0,
       0,
@@ -26,14 +25,14 @@
       24,
       30,
       10,
-      63,
-      91,
+      77,
+      124,
       38,
       248,
-      252,
-      118,
+      273,
+      132,
       112,
-      67,
+      68,
       72,
       195,
       74,
@@ -43,32 +42,33 @@
       169,
       73,
       73,
-      70,
+      77,
       57,
       13,
-      73,
-      48,
-      37,
-      48,
-      4,
+      82,
+      60,
+      39,
+      101,
+      24,
       37,
       0,
       2,
       24,
-      0
+      8,
+      26
     ],
     "languages": [
       {
         "name": "GDScript",
-        "pct": 51.3
+        "pct": 51.8
       },
       {
         "name": "Python",
-        "pct": 45.8
+        "pct": 45.4
       },
       {
         "name": "C++",
-        "pct": 0.8
+        "pct": 0.7
       },
       {
         "name": "CSS",
@@ -106,14 +106,14 @@
       "title": "Self-assembled nanoparticle micro-shells templated by liquid crystal sorting",
       "venue": "Soft Matter",
       "year": 2015,
-      "citations": 34,
+      "citations": 35,
       "doi": "10.1039/c4sm02326a"
     },
     {
       "title": "Benchmarking topic models on scientific articles using BERTeley",
       "venue": "Natural Language Processing Journal",
       "year": 2024,
-      "citations": 30,
+      "citations": 31,
       "doi": "10.1016/j.nlp.2023.100044"
     }
   ]
