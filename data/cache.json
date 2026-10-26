@@ -1,10 +1,9 @@
 {
   "activity": {
-    "commits": 2739,
-    "prs": 64,
+    "commits": 2896,
+    "prs": 79,
     "repos_contributed": 26,
     "weeks": [
-      7,
       3,
       28,
       7,
@@ -46,7 +45,7 @@
       13,
       86,
       60,
-      40,
+      50,
       101,
       26,
       40,
@@ -54,8 +53,9 @@
       2,
       24,
       8,
-      153,
-      28
+      183,
+      161,
+      27
     ],
     "languages": [
       {
@@ -85,7 +85,7 @@
       "title": "Xi-cam: a versatile interface for data visualization and analysis",
       "venue": "Journal of Synchrotron Radiation",
       "year": 2018,
-      "citations": 108,
+      "citations": 109,
       "doi": "10.1107/S1600577518005787"
     },
     {
@@ -113,7 +113,7 @@
       "title": "Benchmarking topic models on scientific articles using BERTeley",
       "venue": "Natural Language Processing Journal",
       "year": 2024,
-      "citations": 31,
+      "citations": 33,
       "doi": "10.1016/j.nlp.2023.100044"
     }
   ]
