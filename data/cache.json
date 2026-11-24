@@ -1,10 +1,9 @@
 {
   "activity": {
-    "commits": 3175,
-    "prs": 108,
-    "repos_contributed": 27,
+    "commits": 3299,
+    "prs": 109,
+    "repos_contributed": 28,
     "weeks": [
-      0,
       16,
       1,
       0,
@@ -52,10 +51,11 @@
       8,
       183,
       164,
-      221,
-      146,
-      9,
-      13
+      235,
+      161,
+      17,
+      98,
+      14
     ],
     "languages": [
       {
@@ -113,7 +113,7 @@
       "title": "Benchmarking topic models on scientific articles using BERTeley",
       "venue": "Natural Language Processing Journal",
       "year": 2024,
-      "citations": 33,
+      "citations": 34,
       "doi": "10.1016/j.nlp.2023.100044"
     }
   ]
